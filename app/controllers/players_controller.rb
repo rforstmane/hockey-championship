@@ -3,6 +3,16 @@ class PlayersController < ApplicationController
     @players = Player.all
   end
 
+  def remote_players
+    @players = Player.all.includes(:team)
+    @players_with_teams = @players.map do |player|
+      player.attributes.merge(
+        'full_name' => player.team.full_name
+      )
+    end
+    render json: @players_with_teams
+  end
+
   def show
     @player = Player.find(params[:id])
   end
