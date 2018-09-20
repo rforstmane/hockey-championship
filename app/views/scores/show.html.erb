@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Home team:</strong>
+  <%= @score.home_team.full_name %>
+</p>
+
+<p>
+  <strong>Visitor team:</strong>
+  <%= @score.visitor_team.full_name %>
+</p>
+
+<p>
+  <strong>Home teams goals:</strong>
+  <%= @score.home_goals %>
+</p>
+
+<p>
+  <strong>Visitor teams goals:</strong>
+  <%= @score.visitor_goals %>
+</p>
+
+<%= link_to 'Edit', edit_score_path(@score) %> |
+<%= link_to 'Back', scores_path %>
