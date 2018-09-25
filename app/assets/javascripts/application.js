@@ -31,6 +31,9 @@ $(document).ready(function(){
         <td><a data-confirm="Are you sure?" rel="nofollow" data-method="delete" href="/players/${player.id}">Destroy</a></td>
       </tr>`)
 
+      
+
+
     }
     function renderPlayersTable() {
         setInterval(function() {
