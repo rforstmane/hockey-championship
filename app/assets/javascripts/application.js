@@ -18,12 +18,8 @@
 
 
 $(document).ready(function(){
-    // alert("Dokuments ir ielādējies");
-    // console.log(">>> Hi!");
-    // console.log(document);
 
     function printPlayer(player) {
-      
         $("tbody").append(`  <tr>
         <td>${player.name}</td>
         <td>${player.number}</td>
@@ -42,16 +38,6 @@ $(document).ready(function(){
             .done(function(players) {
                 $("tbody tr").remove()
                 players.map((item) => printPlayer(item))
-    
-               
-                
-                // players.map(function(item) {
-                //     printPlayer(item)
-                // })
-                // // 1.
-                // console.log(players)
-                // $("body").append(players[0].name)
-                // $("body").append(players[1].name)
             });
         }, 1000);
     }
@@ -70,11 +56,3 @@ $(document).ready(function(){
 
 
 });
-
-
-
-// $(document).ready(function(){
-
-// });
-
-
