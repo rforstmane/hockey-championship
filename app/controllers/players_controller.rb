@@ -12,6 +12,7 @@ class PlayersController < ApplicationController
     end
     render json: @players_with_teams
   end
+  
 
   def show
     @player = Player.find(params[:id])
